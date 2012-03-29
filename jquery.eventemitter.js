@@ -84,7 +84,7 @@ $.EventEmitter.applyTo = function(dst) {
 	var Tmp = function() {};
 	Tmp.prototype = $.EventEmitter.prototype;
 	dst.prototype = new Tmp();
-	dst.prototype.constructor = src;
+	dst.prototype.constructor = $.EventEmitter;
 	return dst;
 };
 })(jQuery);
